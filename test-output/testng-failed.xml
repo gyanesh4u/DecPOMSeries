@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Failed suite [Hub Spot Test Suite]" parallel="methods">
+  <listeners>
+    <listener class-name="com.qa.hubspot.listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="4" name="hub spot regression Test(failed)" parallel="methods">
+    <classes>
+      <class name="com.qa.hubspot.tests.HomePageTest">
+        <methods>
+          <include name="verifyHomePageTitleTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+      <class name="com.qa.hubspot.tests.ContactsPageTest">
+        <methods>
+          <include name="createContactsTest" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.tests.ContactsPageTest -->
+    </classes>
+  </test> <!-- hub spot regression Test(failed) -->
+</suite> <!-- Failed suite [Hub Spot Test Suite] -->
